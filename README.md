@@ -1,12 +1,41 @@
-# 云开发 quickstart
+##### 项目介绍
 
-这是云开发的快速启动指引，其中演示了如何上手使用云开发的三大基础能力：
+> + 页面目录结构
 
-- 数据库：一个既可在小程序前端操作，也能在云函数中读写的 JSON 文档型数据库
-- 文件存储：在小程序前端直接上传/下载云端文件，在云开发控制台可视化管理
-- 云函数：在云端运行的代码，微信私有协议天然鉴权，开发者只需编写业务逻辑代码
+```
+miniprogram
+    ├─@babel
+    ├─components	（公共组件）
+    ├─images	（图片资源）
+    ├─pages
+    │  ├─bind	（教务绑定功能）
+    │  │  ├─index	
+    │  │  └─xieyi
+    │  ├─fuwu	（基础服务功能）
+    │  │  ├─LostFound	（失物招领）
+    │  │  │  └─LostFound_add	（发布失物招领）
+    │  │  ├─news	（校园新闻）
+    │  │  └─Temperature		（体温填报）
+    │  ├─index		
+    │  │  ├─achievement		（查询成绩）
+    │  │  ├─JW_news
+    │  │  ├─news
+    │  │  └─xl		（校历）
+    │  ├─kb		（课表功能）
+    │  │  └─add		（更换修改课表）
+    │  └─my
+    │      └─setting		（个人信息设置）
+    └─util		（工具库）
+```
 
-## 参考文档
+> + 云函数目录结构
 
-- [云开发文档](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html)
+```
+├─cloudfunctions
+│  ├─kb		（主要的服务功能，对接学校接口云函数）
+│  ├─tw		（体温填报功能）
+│  └─user	（获取用户信息，检查登陆是否过期）
+```
+
+
 
