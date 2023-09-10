@@ -1,0 +1,62 @@
+<view class="container">
+    <view class="card">
+        <view class="card-top">
+            校园直通车
+        </view>
+        <view class="card-wrap">
+            <block wx:for="{{xyztc_list}}" wx:key="xyztc_list">
+                <navigator url="{{item.bind}}" bindfail="zwkf" class="wrap-item" hover-class="none" open-type="{{item.type}}">
+                    <image src="{{item.icon}}" class="wrap-item-img"></image>
+                    <text>{{item.name}}</text>
+                </navigator>
+            </block>
+        </view>
+    </view>
+    <view class="card">
+        <view class="card-top">
+            综合查询
+        </view>
+        <view class="card-wrap">
+            <block wx:for="{{zhcx_list}}" wx:key="zhcx_list">
+                <block wx:if="{{item.need_xh}}">
+                    <view class="wrap-item" bindtap="{{item.bind}}">
+                        <image src="{{item.icon}}" class="wrap-item-img"></image>
+                        <text>{{item.name}}</text>
+                    </view>
+                </block>
+                <block wx:else>
+                    <navigator url="{{item.bind}}" bindfail="zwkf" class="wrap-item" hover-class="none" open-type="{{item.type}}">
+                        <image src="{{item.icon}}" class="wrap-item-img"></image>
+                        <text>{{item.name}}</text>
+                    </navigator>
+                </block>
+            </block>
+        </view>
+    </view>
+    <view class="card">
+        <view class="card-top">
+            数据应用
+        </view>
+        <view class="card-wrap">
+            <block wx:for="{{sjyy_list}}" wx:key="sjyy_list">
+                <navigator url="{{item.bind}}" bindfail="zwkf" class="wrap-item" hover-class="none" open-type="{{item.type}}">
+                    <image src="{{item.icon}}" class="wrap-item-img"></image>
+                    <text>{{item.name}}</text>
+                </navigator>
+            </block>
+        </view>
+    </view>
+    <view class="card">
+        <view class="card-top">
+            校园服务
+        </view>
+        <view class="card-wrap">
+            <block wx:for="{{xyfw_list}}" wx:key="xyfw_list">
+                <navigator url="{{item.bind}}" bindfail="zwkf" class="wrap-item" hover-class="none" open-type="{{item.type}}">
+                    <image src="{{item.icon}}" class="wrap-item-img"></image>
+                    <text>{{item.name}}</text>
+                </navigator>
+            </block>
+        </view>
+    </view>
+</view>

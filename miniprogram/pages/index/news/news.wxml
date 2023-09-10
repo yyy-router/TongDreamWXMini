@@ -1,0 +1,29 @@
+<!--pages/index/news/news.wxml-->
+<view class="container">
+    <view class="news-top">
+        <view class="news-title">{{news.title}}</view>
+        <view class="news-message">
+            <view class="news-editor" wx:if="{{news.editor!=null}}">{{news.editor}}</view>
+            <view class="news-from">{{news.from}}</view>
+            <view class="news-time">{{news.time}}</view>
+        </view>
+    </view>
+    <view class="news-content">
+        <block wx:for="{{news.paragraph}}" wx:for-index="idx" wx:for-item="paragraph" wx:key="news">
+            <block wx:for="{{news.imgposition}}" wx:for-index="imgindex" wx:for-item="pos" wx:key="img">
+                <block wx:if="{{idx==pos}}">
+                    <view class="news-content-image">
+                        <image src="{{news.imgs[imgindex]}}" bindtap="img_view" mode="widthFix" show-menu-by-longpress="true" data-id="{{imgindex}}" />
+                    </view>
+                </block>
+            </block>
+            <text user-select="true">{{paragraph}}</text>
+        </block>
+        <block wx:for="{{news.downloads[2]}}" wx:key="downloads">
+            <view class="download" id="{{index}}" bindtap="downloadfile">
+                附件{{index+1}}:
+                <text>{{item}}</text>
+            </view>
+        </block>
+    </view>
+</view>

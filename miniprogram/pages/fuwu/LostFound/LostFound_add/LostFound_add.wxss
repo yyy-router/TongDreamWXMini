@@ -1,0 +1,71 @@
+/* pages/fuwu/LostFound/LostFound_add/LostFound_add.wxss */
+.body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20rpx 30rpx;
+}
+
+.wp {
+    margin-top: 30rpx;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.picker {
+    display: flex;
+    flex-direction: row;
+}
+
+.wp input {
+    text-align: right;
+    width: 80%;
+}
+
+.wp textarea {
+    width: 70%;
+    border: grey solid 1px;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.imgs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.img-list {
+    width: 70px;
+    padding: 5px;
+    height: 70px;
+    border: grey 1px solid;
+}
+
+.img-add {
+    display: flex;
+    border: dashed grey 2px;
+    color: grey;
+    width: 70px;
+    height: 70px;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+}
+
+.fabu {
+    border: solid 1px lightgrey;
+}

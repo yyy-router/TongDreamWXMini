@@ -1,0 +1,26 @@
+.body{
+    padding: 30rpx;
+  }
+  .title{
+    font-size: 34rpx;
+    margin-bottom: 40rpx;
+    font-weight: 500;
+    margin-top: 40rpx;
+  }
+  .main{
+   color: #999;
+   font-size: 30rpx;
+  }
+  .foot1{
+    color: #999;
+    font-size: 30rpx;
+    text-align: center;
+    margin-top: 50rpx;
+  }
+  .foot2{
+    word-break: keep-all;
+    word-wrap: break-word;
+    white-space: pre-line;
+    text-align: right;
+    line-height: 50rpx;
+  }

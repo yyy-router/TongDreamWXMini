@@ -1,0 +1,65 @@
+<!--pages/achievement/achievement/achievement.wxml-->
+<view class="cj-header">
+  <view class="cj-text">
+    <text class="cj-header-title">成绩查询</text>
+    <view class="cj-header-info">姓名：{{username}}</view>
+    <view class="cj-header-info">学号：{{xh}}</view>
+  </view>
+  <image class="cj-bg" src="/images/ac_consult.png"></image>
+</view>
+
+<view class="cj-info-ctn">
+  <view class="cj-grade">
+      <image class="cj-grade-logo" src="/images/ac_c.png"></image>
+      <view class="cj-grade-term">
+          <view class="cj-grade-fst">
+            <picker bindtap="hand_tap" bindchange="changeMultiPicker" mode = "multiSelector" value="{{multiIndex}}" range="{{multiArray}}">
+              <view class="grade-comment">
+                <!-- 给选择学期加一个样式,让人能看出来是可点击的 -->
+              {{multiArray[0][multiIndex[0]]}}-{{multiArray[0][multiIndex[0]]+1}} 学年 第{{multiArray[1][multiIndex[1]]}}学期
+              </view>
+            </picker>
+          </view>
+      </view>
+  </view>
+  <view class="cj-info-box">
+    <block wx:if="{{score.length != 0}}">
+    <view class="cj-info">
+      <text class="cj-info-name grey">综测裸分绩点</text>
+      <view>
+        <view class="cj-info-sum socre-cj grey">绩点</view>
+        <view class="cj-info-sum socre-xf grey">学分</view>
+        <view class="cj-info-sum socre-jd grey">GPA</view>
+      </view>
+    </view>
+    <view class="cj-info">
+      <text class="cj-info-name grey"></text>
+      <view>
+        <view class="cj-info-socre socre-cj grey">{{sum_jd}}</view>
+        <view class="cj-info-socre socre-xf grey">{{sum_xf}}</view>
+        <view class="cj-info-socre socre-jd grey">{{lfjd}}</view>
+      </view>
+    </view>
+    <view class="cj-info">
+      <text class="cj-info-name grey">课程</text>
+        <view>
+          <view class="cj-info-sum socre-cj grey">成绩</view>
+          <view class="cj-info-sum socre-xf grey">学分</view>
+          <view class="cj-info-sum socre-jd grey">绩点</view>
+        </view>
+    </view>
+      <view class="cj-info" wx:for="{{score}}" wx:key="index">
+          <text class="cj-info-name">{{item.kcmc}}</text>
+          <view>
+            <view class="cj-info-socre socre-cj">{{item.cj}}</view>
+            <view class="cj-info-socre socre-xf">{{item.xf}}</view>
+            <view class="cj-info-socre socre-jd">{{item.jd}}</view>
+          </view>
+      </view>
+    </block>
+    <block wx:else>
+        <view class="no_score">该学期成绩未开放！</view> 
+    </block>
+  </view>
+</view>
+

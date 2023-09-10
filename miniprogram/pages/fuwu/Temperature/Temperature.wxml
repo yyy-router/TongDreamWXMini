@@ -1,0 +1,32 @@
+<!--pages/fuwu/Temperature/Temperature.wxml-->
+<image class="background" src="/images/Temperature.png"></image>
+<view class="container">
+    <view class="main" style="margin-top: {{height*0.30}}px;">
+        <view>测温时间</view>
+        <view class="time" style="margin-top: {{height*0.015}}px;">
+            <view>
+                {{time}}
+            </view>
+            <picker mode="time" bindchange="changetime" value="{{hour}}:{{minute}}" class="time-picker">
+                {{hour}}:{{minute}}
+            </picker>
+        </view>
+        <view class="Temp" style="margin-top: {{height*0.015}}px;">
+            <view>体温:</view>
+            <picker class="Temp-picker" mode="multiSelector" bindchange="changeTemp" value="{{[0,0]}}" range="{{[[35,36,37,38,39,40,41,42],[0,1,2,3,4,5,6,7,8,9]]}}">
+                {{Temp_int}}:{{Temp_point}}
+            </picker>
+            <view>℃</view>
+            <view class="sumbit" bindtap="sumbit">提交</view>
+        </view>
+    </view>
+    <view class="history-top" style="margin-top: {{height*0.045}}px;">
+        今日历史测温记录
+    </view>
+    <block wx:for="{{history}}" wx:key="history">
+        <view class="history-data" style="{{item.Temp>=37.5?'color:red':''}}">
+            <view class="history-data-time">{{item.time}}</view>
+            <view>{{item.Temp}}</view>
+        </view>
+    </block>
+</view>

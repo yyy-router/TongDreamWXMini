@@ -1,0 +1,135 @@
+<view class="container">
+  <view class="swiper">
+    <!-- 轮播图 -->
+    <swiper class="swiper-box" autoplay="true" interval="3000" previous-margin="{{swiperMargin}}" next-margin="{{swiperMargin}}" bindchange="swiperChange">
+      <block wx:for="{{swiperList}}" wx:key="id">
+        <swiper-item bindtap="toDetail" data-proid="{{item.productId}}" style="text-align: center;">
+          <view class="swiper-item-view">
+            <image mode="aspectFill" class="swiper-image {{ swiperCurrent==index?'active':''}}" src="{{item.imgUrl}}" />
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="swiper-dots-view">
+      <view class="swiper-dot {{ swiperCurrent==index?'active':''}}" wx:for="{{swiperList}}" wx:key="id"></view>
+    </view>
+  </view>
+  <!-- <view class="sort-list"> -->
+  <!--快捷菜单-->
+  <!-- <view class="sort-warp">
+      <block wx:for="{{sort_list}}" wx:key="sort_list">
+        <view class="sort-item" bindtap="{{item.bind}}">
+          <image src="{{item.icon}}" class="item-img"></image>
+          <text>{{item.name}}</text>
+        </view>
+      </block>
+    </view>
+  </view> -->
+  <!-- 课程提醒 -->
+  <view class="center">
+    <view class="center-header">
+      <view class="center_item_img">
+        <image class="center_img" src="../../images/rili.svg"></image>
+      </view>
+      <view class="weeknumber">
+        <picker bindtap="hand_tap" bindchange="change_week" value="{{index}}" range="{{dweek}}" wx:if="{{jl_week!='假期中'}}">
+          第{{dweek[index]}}周
+        </picker>
+        <picker bindtap="hand_tap" bindchange="change_week" value="{{index}}" range="{{dweek}}" wx:else>
+          假期中
+        </picker>
+      </view>
+      <view class="day">
+        <picker bindtap="hand_tap" bindchange="change_day" value="{{week}}" range="{{a}}">
+          星期{{a[week]}}
+        </picker>
+      </view>
+    </view>
+    <!--判断是否绑定学号-->
+    <block wx:if="{{is_bind_xh}}">
+      <block wx:if="{{wlist.length>0}}">
+        <view class="kc_today text-green  text-df ">
+          <text class="text_left">课程</text>
+          <text class="text_right">上课地点</text>
+        </view>
+        <view class='line'></view>
+        <block wx:for="{{wlist}}" wx:key="key">
+          <view class="kc_today  text-df" style="color: #808080;">
+            <text class="text_left">{{item.kcxx}}</text>
+            <text class="text_right">{{item.skdd}}</text>
+          </view>
+          <view class=" text-df">
+            <text class="time">{{item.sksj}}</text>
+            <view class='line'></view>
+          </view>
+        </block>
+      </block>
+      <block wx:elif="{{wlist.length==0}}">
+        <view class="kc_today text-grey  text-df">
+          今天没课哟~~
+        </view>
+      </block>
+      <block wx:else>
+        <view class="center-body bg-blue radius " bindtap="get_kb">
+          获取课表
+        </view>
+      </block>
+    </block>
+    <block wx:else>
+      <view class="center-body bg-blue radius" bindtap="bind_xh">
+        绑定学号
+      </view>
+    </block>
+  </view>
+  <block wx:if="{{weather!=''}}">
+    <view class="center">
+      <view class="center-header">
+        <view class="center_item_img">
+          <image class="center_img" src="../../images/weather/{{weather_icon}}.png"></image>
+          <view style="font-weight: bold;">{{weather.weather.data}}</view>
+        </view>
+        <view class="weeknumber">{{weather.liveData.province}}</view>
+        <view class="day">{{weather.city.data}}</view>
+      </view>
+      <view class="kc_today text-grey text-right weather">
+        <text>风向:{{weather.winddirection.data}}</text>
+        <text>风力:{{weather.windpower.data}}</text>
+      </view>
+      <view class="kc_today text-grey text-df weather">
+        <text>温度:{{weather.temperature.data}}℃</text>
+        <text>湿度:{{weather.humidity.data}}</text>
+      </view>
+    </view>
+  </block>
+  <view class="news">
+    <!--校园新闻-->
+    <view class="news-top" bindtap="tabChange">
+      <view class="news-top-left">
+        <block wx:for="{{news_list}}" wx:key="news">
+          <view class="news-top-item {{news_list_number==index?'active':''}}" data-number="{{index}}">
+            {{item}}
+          </view>
+        </block>
+      </view>
+      <image src="../../images/arrow.svg" class="arrow" />
+    </view>
+    <block wx:if="{{news_list_number==0}}">
+      <block wx:for="{{news}}" wx:key="key">
+        <navigator url="./news/news?href={{item.href}}" class="news-item">
+          <view class="news-title">{{item.title}}</view>
+          <view class="news-content">{{item.content}}</view>
+          <view class="news-time">{{item.time}}</view>
+        </navigator>
+      </block>
+    </block>
+    <!--教务通知-->
+    <block wx:else>
+      <block wx:for="{{JW_news}}" wx:key="key">
+        <navigator url="./JW_news/JW_news?href={{item.href}}" class="news-item">
+          <view class="news-title">{{item.title}}</view>
+          <view class="news-time">{{item.time}}</view>
+        </navigator>
+      </block>
+    </block>
+  </view>
+</view>

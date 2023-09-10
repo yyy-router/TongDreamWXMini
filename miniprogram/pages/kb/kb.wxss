@@ -1,0 +1,123 @@
+.background {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -1;
+  background-size: 100% 100%;
+}
+
+.week {
+  font-size: 30rpx;
+  font-weight: bolder;
+  text-align: center;
+  height: 100rpx;
+  line-height: 100rpx;
+  background-color: gold;
+}
+
+.day {
+  color: rgb(41, 36, 33);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  font-size: 25rpx;
+}
+
+.day-text {
+  width: 12.5%;
+  font-size: 30rpx;
+  text-align: center;
+  font-weight: bold;
+}
+
+.scroll {
+  z-index: 5;
+}
+
+.time {
+
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.time-left {
+  display: flex;
+  color: rgb(41, 36, 33);
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 120rpx;
+  font-size: 20rpx;
+  font-weight: 700;
+  width: 93.8rpx;
+}
+
+.kb {
+  width: 87.8rpx;
+  position: absolute;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border-radius: 15rpx;
+}
+
+.kb-text {
+  font-size: 20rpx;
+  color: #fff;
+  padding-left: 3rpx;
+}
+
+.tckb {
+  background: #fbaa05;
+  color: white;
+  position: fixed;
+  min-height: 150rpx;
+  width: 180rpx;
+  right: 8rpx;
+  bottom: 0;
+  font-size: 26rpx;
+  padding: 10rpx;
+  letter-spacing: 5rpx;
+  opacity: .9;
+  z-index: 999;
+  border-radius: 20rpx;
+}
+
+.tckb .tip {
+  color: gray;
+}
+
+.tckb .close {
+  text-align: center;
+  color: black;
+  font-weight: 600;
+  padding-top: 10rpx;
+  font-size: 28rpx;
+}
+
+.bangzhu {
+  position: fixed;
+  width: 70rpx;
+  height: 70rpx;
+  bottom: 0;
+  right: 8rpx;
+  z-index: 99;
+}
+
+.rq {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: black;
+  font-weight: bold;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+.zhou {
+  font-weight: 500;
+  margin-left: 10px;
+  font-size: 9pt;
+}

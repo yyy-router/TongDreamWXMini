@@ -1,0 +1,46 @@
+<view class="container">
+
+<image class="background" src="/images/bg_bind_xh.png" />
+	<text class="title">沈理教务系统登录</text>
+	<form bindsubmit="formsubmit" class="login">
+			<view class="iput">
+				<view class="iput-item">
+					<image src="/images/user.png" mode="widthFix"/>
+					<input maxlength="10"  type="text" placeholder="学号" name="username" placeholder-style="text-align: center;"></input>
+				</view>
+				<view class="iput-item">
+					<image src="/images/password.png" mode="widthFix" />
+					<input type="text" password="true" placeholder="请输入您的密码" name="pwd" placeholder-style="text-align: center;"></input>
+				</view>
+			</view>
+
+		<view class="btn">
+			<button form-type="submit">绑定学号</button>
+		</view>
+
+		<view class="tongyi">
+			<checkbox-group name="is_ty">
+				<checkbox value="yes" style="margin-right:10rpx;"  />使用前请同意
+			</checkbox-group>
+			<navigator url="../xieyi/xieyi">《用户协议》</navigator>
+		</view>
+	</form>
+
+	<!-- <view class="cu-modal {{show?'show':''}}">
+		<view class="cu-dialog">
+			<view class="cu-bar bg-white justify-end">
+				<view class="content">用户信息</view>
+				<view class="action" bindtap="hide_show">
+					<text class="cuIcon-close text-red"></text>
+				</view>
+			</view>
+			<view class="padding-xl">
+        <view wx:for="{{res}}">
+        {{item}}
+        </view>
+				
+			</view>
+		</view>
+	</view> -->
+
+</view>

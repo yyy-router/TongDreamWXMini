@@ -1,0 +1,57 @@
+<!--pages/kb/add/add.wxml-->
+<text class="tm">添加课程</text>
+<view class="mc">
+  <view class="mc_icon">
+    <image src='../../../images/mc.png' style="display:inline" mode="aspectFit" />
+  </view>
+  <input class="mc_text" bindinput="input_kcmc" placeholder-style='font-size:12px;' placeholder='课程名称' />
+</view>
+<view class="mc">
+  <view class="mc_icon">
+    <image src='../../../images/dd.png' style="display:inline" mode="aspectFit" />
+  </view>
+  <input class="mc_text" bindinput="input_cdmc" placeholder-style='font-size:12px;' placeholder='上课地点' />
+</view>
+<view class="mc">
+  <view class="mc_icon">
+    <image src='../../../images/js.png' style="display:inline" mode="aspectFit"></image>
+  </view>
+  <input class="mc_text" bindinput="input_teacher" placeholder-style='font-size:12px;' placeholder='任课教师' />
+</view>
+<view class="sjd"><text>时间段</text></view>
+<!-- <view class="box1">
+<button class="zhou" bindtap="showzs"><text class="wz">第1-20周</text></button>
+</view>
+<view class="box2">
+  <view class="mc_icon">
+    <image src='../../../images/sj.png' style="display:inline" mode="aspectFit" />
+    </view>
+<button class="time" bindtap="modalcnt"><text class="wz">时间</text></button>
+</view> -->
+
+<view class="week">
+  <view class="mc_icon">
+    <image src='../../../images/zhou.png' style="display:inline" mode="aspectFit" />
+  </view>
+  <view class="mc_text">
+    <picker bindchange="bindPickerChange1" mode="multiSelector" value="{{[inedx4,index5]}}" range="{{[array4,array5]}}" class='picker'>
+      周数：第{{array4[index4]}}周-第{{array5[index5]}}周
+    </picker>
+  </view>
+</view>
+
+
+
+<view class="time">
+
+  <view class="mc_icon">
+    <image src='../../../images/sj.png' style="display:inline" mode="aspectFit" />
+  </view>
+  <view class="mc_text">
+    <picker bindchange="bindPickerChange" mode="multiSelector" value="{{[inedx1,index2,index3]}}" range="{{[array1,array2,array3]}}" class='picker'>
+      时间：{{array1[index1]}}-{{array2[index2]}}-{{array3[index3]}}
+    </picker>
+  </view>
+</view>
+
+<button bindtap="baocun">保存</button>

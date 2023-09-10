@@ -1,0 +1,27 @@
+<!--pages/my/setting/setting.wxml-->
+<view class="container">
+    <view class="top">
+        设置
+    </view>
+    <view class="card">
+        <view class="card-item">
+            <view class="card-item-content">
+                清除缓存
+            </view>
+            <image class="card-arrow" src="../../../images/arrow.svg" />
+        </view>
+        <view class="card-item">
+            <view class="card-item-content">
+                重新登录
+            </view>
+            <image class="card-arrow" src="../../../images/arrow.svg" />
+        </view>
+        <view class="card-item">
+            <view class="card-item-content">
+                退出登录
+            </view>
+            <image class="card-arrow" src="../../../images/arrow.svg" />
+        </view>
+    </view>
+</view>
+

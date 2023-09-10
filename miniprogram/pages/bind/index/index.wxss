@@ -1,0 +1,132 @@
+.container{
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center; 
+    margin: auto;
+    padding: 10rpx;
+    flex-direction: column;
+    /* 为了让容器有上边距 */
+    margin-top: 50rpx;
+  }
+  
+  .background {
+    position: absolute;
+    display: block;
+    top:0;
+    left: 0;
+    z-index: -999;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .login{
+    background-color: #FFF;
+    width: 600rpx;
+    margin-top:40rpx;
+    padding-top: 20rpx;
+    border-radius: 30rpx;
+    box-shadow: 2rpx 5rpx 10rpx #aaa;
+  }
+  
+  .img{
+    display: flex;
+    margin-bottom: 100rpx;
+    margin-top: 30rpx;
+  }
+  .img1 image{
+    width: 150rpx;
+    height: 150rpx;
+    border-radius: 50%;
+    margin-left: 20rpx;
+    margin-right: 20rpx;
+    box-shadow:0 6rpx 10rpx 2rpx #999;
+    -webkit-box-shadow:0px 3px 5px 1px #999;
+  }
+  .img2 image{
+    width: 70rpx;
+    height: 70rpx;
+    margin-left: 20rpx;
+    margin-right: 20rpx;
+    margin-top: 30rpx;
+    border-radius: 50%;
+  }
+  .img3 image{
+    width: 150rpx;
+    height: 150rpx;
+    margin-left: 20rpx;
+    margin-right: 20rpx;
+    border-radius: 50%;
+    box-shadow:0 6rpx 10rpx 2rpx #999;
+    -webkit-box-shadow:0px 3px 5px 1px #999;
+  }
+  
+  .title{
+    color: #FFF;
+    font-size: 60rpx;
+    font-weight: bold;
+    letter-spacing:5rpx;
+    text-shadow: 5px 1px 6px #999;
+    margin:80rpx auto;
+  }
+  .iput{
+      margin-top:80rpx;
+      margin:80rpx auto;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+  }
+  .iput-item{
+    display: flex;
+    flex-direction: row;
+  }
+  .iput image{
+    margin:80rpx 30rpx 0 30rpx;
+    width: 40rpx;
+    height: 30rpx;
+  }
+  .iput input{
+    border-radius: 45rpx;
+    border: 1rpx solid #999;
+    width: 400rpx;
+    height: 90rpx;
+    margin:60rpx 30rpx 0 0;
+    padding-left: 30rpx;
+    padding-right: 30rpx;
+    overflow: hidden;
+  }
+  
+  .tongyi{
+    margin:80rpx auto;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center; 
+  }
+  navigator{
+    text-align: center;
+    color: #18B3EB;
+  }
+  checkbox .wx-checkbox-input{
+     border-radius: 50%;
+     width: 46rpx; 
+     height: 40rpx;
+  }
+  checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+    background: #5b85e4;
+    border-color:#5b85e4;
+  }
+  
+  .btn{
+    margin-top: 80rpx;
+    margin:80rpx auto;
+    width: 470rpx;
+  }
+  .btn button{
+    color: white;
+    letter-spacing:5rpx;
+    background: linear-gradient(45deg, #5b85e4, #4f5acb);
+    box-shadow:0 6rpx 10rpx 2rpx linear-gradient(45deg, #5b85e4, #4f5acb);/*for Android*/
+    -webkit-box-shadow:0px 3px 5px 1px linear-gradient(45deg, #5b85e4, #4f5acb);/*for IOS*/
+  }
+  

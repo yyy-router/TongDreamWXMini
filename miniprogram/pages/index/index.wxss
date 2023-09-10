@@ -1,0 +1,290 @@
+/**index.wxss**/
+
+page {
+  padding-top: 50rpx;
+  padding-bottom: 60rpx;
+}
+
+/*轮播图*/
+.swiper {
+  width: 100%;
+  position: relative;
+  border-bottom: 1px solid #f6f8fc;
+}
+
+.swiper-box {
+  height: 383rpx;
+}
+
+.swiper-item-view {
+  zoom: 1;
+  box-sizing: border-box;
+}
+
+.swiper-item-view:after {
+  display: table;
+  content: "";
+  clear: both;
+}
+
+.swiper-image {
+  overflow: hidden;
+  /* height: 170px; */
+  width: 620rpx;
+  height: 340rpx;
+  transition: transform 500ms;
+  transform: scale(0.95, 0.9);
+  /* 缩放处理，产生一种层次感 */
+  border-radius: 8px;
+  box-shadow: 0px 6px 10px 0px rgba(179, 154, 139, 1);
+}
+
+.swiper-image.active {
+  transform: scale(1, 1);
+}
+
+.swiper-dots-view {
+  /* 水平居中*/
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  left: 0;
+  bottom: 10px;
+  height: 18rpx;
+  /* height: 6px; */
+}
+
+.swiper-dot {
+  width: 6px;
+  height: 6px;
+  margin: 0 3px;
+  border-radius: 3px;
+  background-color: #fff;
+}
+
+.swiper-dot.active {
+  width: 15px;
+  background-color: rgb(221, 65, 3);
+}
+
+/*快捷菜单*/
+.sort-list {
+  background-color: white;
+  width: 100%;
+  padding-top: 20rpx;
+}
+
+.sort-warp {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sort-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 35rpx;
+  width: 25%;
+  align-items: center;
+}
+
+.sort-item text {
+  margin-top: 5rpx;
+  color: #888;
+  font-size: 24rpx;
+}
+
+.item-img {
+  width: 70rpx;
+  height: 70rpx;
+}
+
+.center {
+  /* margin-top: 20rpx; */
+  background: white;
+  width: 100%;
+}
+
+.center-header {
+  margin-bottom: 20rpx;
+  padding-top: 20rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.center_item_img {
+  /* margin-left:8%; */
+  width: 33%;
+  height: 60rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center_img {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.weeknumber {
+  text-align: center;
+  width: 33%;
+  /* margin-left:33%; */
+  font-weight: bold;
+}
+
+.day {
+  text-align: center;
+  width: 33%;
+  /* margin-left: 22%; */
+  font-weight: bold;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.center-body {
+  font-size: 24rpx;
+  margin-left: 35%;
+  margin-top: 10rpx;
+  margin-bottom: 20rpx;
+  width: 30%;
+  padding: 12rpx;
+  text-align: center;
+}
+
+.center-bottom {
+  font-size: 24rpx;
+  padding-top: 15rpx;
+  padding-bottom: 15rpx;
+  text-align: center;
+
+}
+
+.kc_today {
+  margin-bottom: 20rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.text_left {
+  margin-left: 40rpx;
+  display: inline-block;
+  text-align: left;
+  width: 50%;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.text-green {
+  color: #39b54a;
+}
+
+.text-df {
+  font-size: 28rpx;
+}
+
+.weather text {
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+}
+
+.radius {
+  border-radius: 6rpx;
+}
+
+.text_right {
+  margin-right: 40rpx;
+  display: inline-block;
+  text-align: right;
+  width: 50%;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.bg-blue {
+  background-color: #0081ff;
+  color: #fff;
+}
+
+.text-grey {
+  color: #8799a3;
+}
+
+
+.time {
+  font-size: 25rpx;
+  color: #C0C0C0;
+  margin-left: 40rpx;
+  margin-bottom: 20rpx;
+  display: flex;
+}
+
+/*校园新闻*/
+.news {
+  margin-top: 20rpx;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  padding-top: 20rpx;
+  padding-bottom: 10rpx;
+  width: 90%;
+  min-height: 300rpx;
+  border-radius: 30rpx;
+  background-color: white;
+  border-style: solid;
+  box-shadow: 0px 2px 4px 2px #DDDDDD;
+  border-width: 0rpx;
+}
+
+.news-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.news-top-left {
+  display: flex;
+  flex-direction: row;
+}
+
+.news-top-item {
+  margin-right: 18rpx;
+}
+
+.news-top-item.active {
+  color: #0ca168;
+  border-bottom: 2px solid #0ca168;
+}
+
+.news-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 10rpx;
+  border-bottom: 1px solid rgb(212, 167, 98);
+  min-height: 130rpx;
+  width: 100%;
+}
+
+.news-title {
+  margin-top: 15rpx;
+  margin-bottom: 10rpx;
+  font-weight: 600;
+}
+
+.news-content {
+  font-size: 8pt;
+  margin-bottom: 10rpx;
+}
+
+.news-time {
+  color: #888;
+  font-size: 7pt;
+  bottom: 0;
+}

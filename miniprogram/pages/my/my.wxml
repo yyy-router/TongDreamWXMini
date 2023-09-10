@@ -1,0 +1,70 @@
+<!--pages/my/my.wxml-->
+<view class="container">
+  <!-- 顶部信息展示区域 -->
+  <view class="top">
+    <view class="user">
+      <view class="left">
+        <view class="name">
+          <view>{{username}}</view>
+          <view wx:if="{{!userflag}}" class="shouquan" bindtap="getuserinfo">
+            <text>点击登陆</text>
+            <image src="../../images/rightArr.png" mode="scaleToFill" class="rightArr" />
+          </view>
+        </view>
+        <image src="{{avatarUrl}}" class="avatar" />
+
+      </view>
+
+    </view>
+  </view>
+  <!-- 底部功能区域 -->
+  <view class="card">
+    <!-- 时间展示区域 -->
+    <view class="timeShow">
+      <view>{{year}}-{{year+1}}第{{term}}学期</view>
+      <view>{{week=='假期中'?"假期中":"第"+week+"周"}} 星期{{day}}</view>
+    </view>
+    <!-- 自定义功能区域 -->
+    <view class="custom">
+      <view class="number">
+        <image src="../../images/myicon/stuId.png" mode="" />
+        <view class="stduId">学号:{{number?number:"未绑定"}}</view>
+        <view class="bindId" bindtap="bind_xh">{{number?"更换绑定":"立即绑定"}} ></view>
+      </view>
+      <view class="setting">
+      <image src="../../images/myicon/setting.png" mode=""/>
+        <view class="setTitle">
+          设置
+        </view>
+        <view class="bindBut" bindtap="bind_set">
+          点击设置 >
+        </view>
+      </view>
+    </view>
+    <!-- 内置功能区域 -->
+    <view class="operate">
+      <button open-type="share" class="card-item">
+        <view class="card-item-content">
+          <text class="iconfont icon-fenxiang"  style="color: #5e99fb;"></text>
+          分享转发
+        </view>
+        <image class="card-arrow" src="../../images/arrow.svg" />
+      </button>
+      <button class="card-item" open-type="contact">
+        <view class="card-item-content">
+          <text class="iconfont icon-kefu"  style="color: #5e99fb;"></text>
+          联系客服
+        </view>
+        <image class="card-arrow" src="../../images/arrow.svg" />
+      </button>
+      <button class="card-item" open-type="feedback">
+        <view class="card-item-content">
+          <text class="iconfont icon-fankui" style="color: #5e99fb;"></text>
+          意见反馈
+        </view>
+        <image class="card-arrow" src="../../images/arrow.svg" />
+      </button>
+    </view>
+
+  </view>
+</view>

@@ -1,0 +1,64 @@
+/* pages/index/JW_news/JW_news.wxss */
+.jwtz-top {
+    display: flex;
+    flex-direction: column;
+    padding-left: 40rpx;
+    padding-right: 40rpx;
+    border-bottom: 1px solid rgb(212, 167, 98);
+}
+
+.jwtz-title {
+    font-weight: 600;
+    margin-top: 10rpx;
+    margin-bottom: 20rpx;
+}
+
+.jwtz-message {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: #888;
+    font-size: 8pt;
+    margin-bottom: 10rpx;
+}
+
+.jwtz-content {
+    margin-top: 20rpx;
+    display: flex;
+    font-size: 12pt;
+    width: 95%;
+    flex-direction: column;
+    text-indent: 24pt;
+    margin-bottom: 60rpx;
+}
+
+.jwtz-page {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.jwtz-button {
+    border: #888 1rpx solid;
+    border-radius: 10rpx;
+    font-weight: 700;
+    font-size: 12pt;
+    width: 36pt;
+    padding: 10rpx 20rpx;
+}
+
+.jwtz-content text {
+    display: flex;
+}
+
+.download {
+    margin-top: 30rpx;
+    width: 95%;
+}
+
+.download text {
+    font-size: large;
+    font-weight: 900;
+}

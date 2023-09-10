@@ -1,0 +1,25 @@
+<!--pages/fuwu/news/news.wxml-->
+<view class="container">
+    <!-- <scroll-view class="scroll-list" scroll-x="true"> -->
+    <view class="list">
+        <block wx:for="{{list}}" wx:key="list">
+            <view class="list-item {{list_number==index?'active':''}}" id="{{index}}" style="background-color: {{item.color}}" bindtap="tabchange">
+                <image src="{{item.icon}}" />
+                <view>{{item.name}}</view>
+            </view>
+        </block>
+    </view>
+    <!-- </scroll-view> -->
+    <view class="news-list">
+        <block wx:for="{{news}}" wx:for-item="news" wx:key="news">
+            <navigator url="../../index/{{id=='jwtz'?'JW_news/JW_news':'news/news'}}?href={{news.href}}" hover-class="none" class="news-item" style="background-color: {{color}};">
+                <view class="news-title">{{news.title}}</view>
+                <view class="news-content" wx:if="{{news.content!=null}}">{{news.content}}</view>
+                <view class="news-time">{{news.time}}</view>
+            </navigator>
+        </block>
+    </view>
+    <view wx:if="{{news.length>=200}}" class="nomore">
+        我是有底线的~
+    </view>
+</view>

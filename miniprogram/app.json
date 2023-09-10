@@ -1,0 +1,68 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/kb/kb",
+        "pages/my/my",
+        "pages/my/setting/setting",
+        "pages/index/xl/xl",
+        "pages/fuwu/fuwu",
+        "pages/bind/index/index",
+        "pages/bind/xieyi/xieyi",
+        "pages/kb/add/add",
+        "pages/index/news/news",
+        "pages/index/JW_news/JW_news",
+        "pages/fuwu/news/news",
+        "pages/fuwu/Temperature/Temperature",
+        "pages/index/achievement/achievement",
+        "pages/fuwu/LostFound/LostFound",
+        "pages/fuwu/LostFound/LostFound_add/LostFound_add"
+    ],
+    "permission": {
+        "scope.userLocation": {
+          "desc": "用于显示所在地天气信息"
+        }
+      },
+      "requiredPrivateInfos":[
+        "getLocation"
+      ],
+    "window": {
+        "backgroundColor": "#F6F6F6",
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#F6F6F6",
+        "navigationBarTitleText": "沈理小同学助手",
+        "navigationBarTextStyle": "black"
+    },
+    "sitemapLocation": "sitemap.json",
+    "style": "v2",
+    "lazyCodeLoading": "requiredComponents",
+    "tabBar": {
+        "color": "#8799a3",
+        "selectedColor": "#8799a3",
+        "list": [
+            {
+                "pagePath": "pages/kb/kb",
+                "text": "课表",
+                "iconPath": "images/kb1.png",
+                "selectedIconPath": "images/kb2.png"
+            },
+            {
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "iconPath": "images/sy1.png",
+                "selectedIconPath": "images/sy2.png"
+            },
+            {
+                "pagePath": "pages/fuwu/fuwu",
+                "text": "服务",
+                "iconPath": "images/fw1.png",
+                "selectedIconPath": "images/fw2.png"
+            },
+            {
+                "pagePath": "pages/my/my",
+                "text": "我的",
+                "iconPath": "images/wd1.png",
+                "selectedIconPath": "images/wd2.png"
+            }
+        ]
+    }
+}

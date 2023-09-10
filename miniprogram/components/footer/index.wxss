@@ -1,0 +1,38 @@
+/* components/footer/index.wxss */
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    margin-top: 30rpx;
+    justify-content: center;
+    align-items: center;
+    color: rgb(110, 110, 110);
+}
+
+.footer button {
+    background-color: rgba(0, 0, 0, 255);
+    width: auto;
+    position: relative;
+    display: flex;
+    margin-left: 5rpx;
+    margin-right: 5rpx;
+    box-sizing: border-box;
+    font-size: 12pt;
+    text-align: center;
+    text-decoration: none;
+    line-height: normal;
+    border-radius: 0px;
+    -webkit-tap-highlight-color: transparent;
+    overflow: hidden;
+    color: rgb(110, 110, 110);
+    background-color: white;
+    padding: 0 0;
+    font-weight: 500;
+}
+
+.footer-item {
+    margin-left: 5rpx;
+    margin-right: 5rpx;
+}

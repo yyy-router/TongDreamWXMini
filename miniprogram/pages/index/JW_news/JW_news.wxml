@@ -1,0 +1,38 @@
+<!--pages/index/JW_news/JW_news.wxml-->
+<view class="container">
+    <view class="jwtz-top">
+        <view class="jwtz-title">{{jwtz[number].title}}</view>
+        <view class="jwtz-message">
+            <view class="jwtz-editor">{{jwtz[number].editor}}</view>
+            <view class="jwtz-time">{{jwtz[number].time}}</view>
+        </view>
+    </view>
+    <view class="jwtz-content">
+        <block wx:for="{{jwtz[number].paragraph}}" wx:key="jwtz">
+            <text user-select="true">{{item}}</text>
+        </block>
+    </view>
+    <block wx:for="{{jwtz[number].downloadname}}" wx:key="downloads">
+        <view class="download" id="{{index}}" bindtap="downloadfile">
+            附件{{index+1}}:
+            <text>{{item}}</text>
+        </view>
+    </block>
+    <block wx:if="{{pageCount>1}}">
+        <view class="jwtz-page">
+            <view>- {{number+1}} -</view>
+            <view>
+                <block wx:if="{{number>0}}">
+                    <view class="jwtz-button" bindtap="prepage">
+                        上一页
+                    </view>
+                </block>
+                <block wx:if="{{number+1<pageCount}}">
+                    <view class="jwtz-button" bindtap="nextpage">
+                        下一页
+                    </view>
+                </block>
+            </view>
+        </view>
+    </block>
+</view>

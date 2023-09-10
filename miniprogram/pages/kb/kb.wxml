@@ -1,0 +1,56 @@
+<view>
+  <!-- <image class='background' src="https://s3.bmp.ovh/imgs/2022/02/709b8ce6bd6daea5.jpg"></image> -->
+  <image class="background" src="../../images/bg_kb.png" />
+</view>
+<view class="rq">
+  <view>{{date}}</view>
+  <view bindtap="get_kb_update">刷新课表</view>
+</view>
+<view class="zhou">
+  <picker bindtap="hand_tap" bindchange="change_week" value="{{index}}" range="{{dweek}}" wx:if="{{week!='假期中'}}">
+    第{{dweek[index]}}周
+  </picker>
+  <picker bindtap="hand_tap" bindchange="change_week" value="{{index}}" range="{{dweek}}" wx:else>
+    假期中
+  </picker>
+</view>
+<view class="day">
+  <view class="day-text">
+    {{month}}月
+  </view>
+  <view class="day-text" wx:for="{{weekday}}" wx:key="key" wx:for-item="day">
+    {{day}}
+  </view>
+</view>
+
+<scroll-view scroll-y="true" class="scroll">
+  <view class="time">
+    <!--左侧时间栏-->
+    <view>
+      <view class="time-left" wx:for="{{sksj}}" wx:key="time">
+        <view style="font-size: 25rpx;" wx:if="{{index<4}}">{{index+1}}</view>
+        <view style="font-size: 25rpx;" wx:elif="{{index==4}}">中午</view>
+        <view style="font-size: 25rpx;" wx:else>{{index}}</view>
+        <view>{{item}}</view>
+      </view>
+    </view>
+    <view>
+      <!--显示的课表-->
+      <view class="kb" bindtap="showCardView" data-zhou="{{kc.zcd}}" data-teacher="{{kc.teacher}}" data-jc="{{kc.jc}}" data-kcmc="{{kc.kcmc}}" data-xqj="{{kc.xqj}}" data-sksj="{{kc.sksj}}" data-opacity="{{kc.opacity}}" data-index="{{index}}" wx:for="{{wlist}}" wx:key='key' wx:for-item="kc" style="margin-top: {{kc.sksj<=4?((kc.sksj-1)*120+5):kc.sksj*120+5}}rpx;margin-left:{{(kc.xqj-1)*93.8+6}}rpx;background-color: {{colorArrays[kc.colorindex%13]}};height: {{(kc.sksj<=4&&kc.skcd+kc.sksj-1>4)?(kc.skcd)*110+120+(kc.skcd/2-1)*20:kc.skcd*110+(kc.skcd/2-1)*20}}rpx;opacity: {{kc.opacity}};">
+        <view class="kb-text">{{kc.kcxx}}</view>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+<view bindtap="show_tckb" class="bangzhu" wx:if="{{!show_tckb}}">
+  <!--显示的右下角图标和下面的wx:else形成提示-->
+  <image mode="aspectFit" src="/images/bangzhu.svg" style="height:70rpx;width:70rpx;"></image>
+</view>
+<view class="tckb" wx:else>
+  <text>{{show_tckb_gonggao}}</text>
+  <text class="tip">
+    仅班级课表可删除、添加课表</text>
+  <view bindtap="show_tckb" class="close">
+    关闭
+  </view>
+</view>

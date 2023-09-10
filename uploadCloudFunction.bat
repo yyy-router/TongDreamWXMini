@@ -1,0 +1,1 @@
+"E:\微信开发者工具1.05.2111130\微信web开发者工具\cli.bat" cloud functions deploy --e mhf-3ga23vro4ddeb7ef --n quickstartFunctions --r --project "E:\WeChatProjects\TongDream" --report_first --report

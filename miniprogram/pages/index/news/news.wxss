@@ -1,0 +1,54 @@
+/* pages/index/news/news.wxss */
+.news-top {
+    display: flex;
+    flex-direction: column;
+    padding-left: 40rpx;
+    padding-right: 40rpx;
+    border-bottom: 1px solid rgb(212, 167, 98);
+}
+
+.news-title {
+    font-weight: 600;
+    margin-top: 10rpx;
+    margin-bottom: 20rpx;
+}
+
+.news-message {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: #888;
+    font-size: 8pt;
+    margin-bottom: 10rpx;
+}
+
+.news-content {
+    margin-top: 20rpx;
+    display: flex;
+    font-size: 12pt;
+    width: 95%;
+    flex-direction: column;
+    text-indent: 24pt;
+    margin-bottom: 60rpx;
+}
+
+.news-content-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+}
+
+.news-content text {
+    display: flex;
+}
+
+.download {
+    margin-top: 30rpx;
+}
+
+.download text {
+    font-size: large;
+    font-weight: 900;
+}

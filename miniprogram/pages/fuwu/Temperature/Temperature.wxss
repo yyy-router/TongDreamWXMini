@@ -1,0 +1,49 @@
+/* pages/fuwu/Temperature/Temperature.wxss */
+.background{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -99;
+}
+.main{
+    display: flex;
+    width: auto;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.time{
+    display: flex; 
+    flex-direction: row;
+    white-space: nowrap;
+    font-size: 30rpx;
+}
+.time-picker{
+    background-color: lightgrey;
+    width: 80rpx;
+    margin-left: 20rpx;
+}
+.Temp{
+    display: flex;
+    font-size: 30rpx;
+}
+.Temp-picker{
+    width: 80rpx;
+    background-color: lightgrey;
+}
+.sumbit{
+    font-weight: 600;
+    margin-left: 30rpx;
+}
+.history-top{
+    font-size: 25rpx;
+}
+.history-data{
+    display: flex;
+    flex-direction: row;
+    font-size: 30rpx;
+}
+.history-data-time{
+    margin-right: 30rpx;
+    margin-bottom: 10rpx;
+}

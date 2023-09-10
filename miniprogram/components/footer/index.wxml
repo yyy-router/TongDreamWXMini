@@ -1,0 +1,8 @@
+<!--components/footer/index.wxml-->
+<view class="footer">
+    <block wx:for="{{footer_list}}" wx:key="list">
+        <view class="footer-item" bindtap="{{item.bind}}">{{item.name}}</view>
+        <view>|</view>
+    </block>
+    <button open-type="contact" class="footer-item">联系客服</button>
+</view>
